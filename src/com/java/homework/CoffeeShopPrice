@@ -1,0 +1,234 @@
+package com.java.homework;
+
+import java.util.Scanner;
+
+public class CoffeeShop {
+
+    // Define the coffee types and their prices
+    public static final double ESPRESSO_PRICE = 2.5;
+    public static final double LATTE_PRICE = 3.5;
+    public static final double CAPPUCCINO_PRICE = 3.0;
+
+    // Define the size prices
+    public static final double SMALL_PRICE = 0.0;
+    public static final double MEDIUM_PRICE = 0.5;
+    public static final double LARGE_PRICE = 1.0;
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Welcome message
+        System.out.println("Welcome to the Coffee Shop!");
+
+        // Display coffee options
+        System.out.println("Please choose a coffee:");
+        System.out.println("1. Espresso ($2.50)");
+        System.out.println("2. Latte ($3.50)");
+        System.out.println("3. Cappuccino ($3.00)");
+        System.out.print("Enter the number of your choice: ");
+        int coffeeChoice = scanner.nextInt();
+
+        // Get the size options
+        System.out.println("Please choose a size:");
+        System.out.println("1. Small (No additional cost)");
+        System.out.println("2. Medium ($0.50 extra)");
+        System.out.println("3. Large ($1.00 extra)");
+        System.out.print("Enter the number of your size choice: ");
+        int sizeChoice = scanner.nextInt();
+
+        // Calculate the price of the selected coffee
+        double coffeePrice = 0;
+        switch(coffeeChoice) {
+            case 1:
+                coffeePrice = ESPRESSO_PRICE;
+                break;
+            case 2:
+                coffeePrice = LATTE_PRICE;
+                break;
+            case 3:
+                coffeePrice = CAPPUCCINO_PRICE;
+                break;
+            default:
+                System.out.println("Invalid coffee choice! Please restart.");
+                System.exit(0);
+        }
+
+        // Calculate the price based on size
+        double sizePrice = 0;
+        switch(sizeChoice) {
+            case 1:
+                sizePrice = SMALL_PRICE;
+                break;
+            case 2:
+                sizePrice = MEDIUM_PRICE;
+                break;
+            case 3:
+                sizePrice = LARGE_PRICE;
+                break;
+            default:
+                System.out.println("Invalid size choice! Please restart.");
+                System.exit(0);
+        }
+
+        // Calculate the total price
+        double totalPrice = coffeePrice + sizePrice;
+
+        // Display the order summary
+        System.out.println("\nYour Order Summary:");
+        System.out.println("Coffee: " + getCoffeeName(coffeeChoice));
+        System.out.println("Size: " + getSizeName(sizeChoice));
+        System.out.println("Total Price: $" + String.format("%.2f", totalPrice));
+
+        scanner.close();
+    }
+
+    // Helper method to get coffee name
+    public static String getCoffeeName(int coffeeChoice) {
+        switch(coffeeChoice) {
+            case 1: return "Espresso";
+            case 2: return "Latte";
+            case 3: return "Cappuccino";
+            default: return "Unknown";
+        }
+    }
+
+    // Helper method to get size name
+    public static String getSizeName(int sizeChoice) {
+        switch(sizeChoice) {
+            case 1: return "Small";
+            case 2: return "Medium";
+            case 3: return "Large";
+            default: return "Unknown";
+        }
+    }
+}
+
+
+
+public class CoffeeOrder {
+    public static void main(String[] args) {
+
+            // Define the coffee types and their prices
+            public static final double ESPRESSO_PRICE = 2.5;
+            public static final double LATTE_PRICE = 3.5;
+            public static final double CAPPUCCINO_PRICE = 3.0;
+
+            // Define the size prices
+            public static final double SMALL_PRICE = 0.0;
+            public static final double MEDIUM_PRICE = 0.5;
+            public static final double LARGE_PRICE = 1.0;
+
+            public static void main(String[] args) {
+
+                Scanner scanner = new Scanner(System.in);
+
+                // Welcome message
+                System.out.println("Welcome to the Coffee Shop!");
+
+                // Display coffee options
+                System.out.println("Please choose a coffee:");
+                System.out.println("1. Espresso ($2.50)");
+                System.out.println("2. Latte ($3.50)");
+                System.out.println("3. Cappuccino ($3.00)");
+                System.out.print("Enter the number of your choice: ");
+                int coffeeChoice = scanner.nextInt();
+
+                // Get the size options
+                System.out.println("Please choose a size:");
+                System.out.println("1. Small (No additional cost)");
+                System.out.println("2. Medium ($0.50 extra)");
+                System.out.println("3. Large ($1.00 extra)");
+                System.out.print("Enter the number of your size choice: ");
+                int sizeChoice = scanner.nextInt();
+
+                // Calculate the price of the selected coffee
+                double coffeePrice = 0;
+                switch(coffeeChoice) {
+                    case 1:
+                        coffeePrice = ESPRESSO_PRICE;
+                        break;
+                    case 2:
+                        coffeePrice = LATTE_PRICE;
+                        break;
+                    case 3:
+                        coffeePrice = CAPPUCCINO_PRICE;
+                        break;
+                    default:
+                        System.out.println("Invalid coffee choice! Please restart.");
+                        System.exit(0);
+                }
+
+                // Calculate the price based on size
+                double sizePrice = 0;
+                switch(sizeChoice) {
+                    case 1:
+                        sizePrice = SMALL_PRICE;
+                        break;
+                    case 2:
+                        sizePrice = MEDIUM_PRICE;
+                        break;
+                    case 3:
+                        sizePrice = LARGE_PRICE;
+                        break;
+                    default:
+                        System.out.println("Invalid size choice! Please restart.");
+                        System.exit(0);
+                }
+
+                // Calculate the total price
+                double totalPrice = coffeePrice + sizePrice;
+
+                // Display the order summary
+                System.out.println("\nYour Order Summary:");
+                System.out.println("Coffee: " + getCoffeeName(coffeeChoice));
+                System.out.println("Size: " + getSizeName(sizeChoice));
+                System.out.println("Total Price: $" + String.format("%.2f", totalPrice));
+
+                scanner.close();
+            }
+
+            // Helper method to get coffee name
+            public static String getCoffeeName(int coffeeChoice) {
+                switch(coffeeChoice) {
+                    case 1: return "Espresso";
+                    case 2: return "Latte";
+                    case 3: return "Cappuccino";
+                    default: return "Unknown";
+                }
+            }
+
+            // Helper method to get size name
+            public static String getSizeName(int sizeChoice) {
+                switch(sizeChoice) {
+                    case 1: return "Small";
+                    case 2: return "Medium";
+                    case 3: return "Large";
+                    default: return "Unknown";
+                }
+            }
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
